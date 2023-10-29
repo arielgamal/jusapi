@@ -1,0 +1,49 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type PartesOutput {
+  nome: String!
+  posicao: String!
+}
+
+type MovimentacoesOutput {
+  descricao: String!
+  data: String!
+}
+
+type Processo {
+  id: Int!
+  cnj: String!
+  tribunal_origem: String!
+  data_inicio: String!
+  partes_processo: [PartesOutput!]!
+  movimentacoes: [MovimentacoesOutput!]!
+}
+
+type Query {
+  processos: [Processo!]!
+  search(param: String!): [Processo!]!
+}
+
+type Mutation {
+  CriarProcesso(criarProcessoInput: CriarProcessoInput!): Processo!
+}
+
+input CriarProcessoInput {
+  cnj: String!
+  tribunal_origem: String!
+  data_inicio: String!
+  partes_processo: [partesInput!]!
+  movimentacoes: [movimentacoesInput!]!
+}
+
+input partesInput {
+  nome: String!
+  posicao: String!
+}
+
+input movimentacoesInput {
+  descricao: String!
+  data: String!
+}
