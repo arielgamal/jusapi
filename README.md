@@ -6,7 +6,7 @@ Siga o passo a passo abaixo para iniciar a API.
 ## Começando:
 Entre na pasta graphql-api
 ```bash
-cd graphql-api
+cd jusapi
 ```
 
 ## Comando de instalação
